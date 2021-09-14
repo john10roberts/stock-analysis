@@ -1,4 +1,4 @@
-# stock-analysis
+# Stock-Analysis
 Stock data analysis
 ## Overview of Project
 Refactor previous version of stock analysis visual basic for applications code to improve efficiency. 
@@ -53,36 +53,26 @@ I began by taking the existing code and removing the existing loop structure whi
         Cells(4 + i, 3).Value = tickerEndingPrices(i) / tickerStartingPrices(i) - 1
     
     Next i
-
-
-
 ### Results
-![Original 2017 Speed](https://github.com/john10roberts/kickstarter-analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
-![Original 2018 Speed](https://github.com/john10roberts/kickstarter-analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
-![Refactored 2017 Speed](https://github.com/john10roberts/kickstarter-analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
-![Refactored Speed](https://github.com/john10roberts/kickstarter-analysis/blob/main/Resources/Theater_Outcomes_vs_Launch.png)
-For the analysis based on launch date we used the year column to allow us to filter the data based on the year the kickstarter was started.  Created a pivot table to show all the successfull, failed and canceled kickstarters.  Then we filtered that by the parent category of theater.  That data showed us again that most successful kickstarters for theaters are at their peak in May.  The successful campaigns start to trail off the following months and hit a low in december.  
+The speed for the original file for 2017:
+![Original 2017 Speed](https://github.com/john10roberts/stock-analysis/blob/main/Resources/Green_stocks_ProcessingTime_2017.png)
 
-### Analysis of Outcomes Based on Goals
-![Outcomes Based on Goals](https://github.com/john10roberts/kickstarter-analysis/blob/main/Resources/Outcomes_vs_Goals.png)
-For the outcomes based on goals we created a table that would calculate the outcomes of a particular kickstarter based on a range of goals.  The ranges started at under 1000 - greater than 50000.  We then used these groupings to calculate the percentage of kickstarters that suceeded/failed/cancelled.  The data shows that lower goal kickstarters are successful at a much higher rate than.  And while the line chart associated with the data shows that there was an increase in the percentage successful for campaigns from 35-45k the total number of those campaigns are so low that it might be a little misleading just looking at the chart.  It appears that for kickstarters with goals of less than 5k they have the highest odds of success.  
+The speed for the refactored file for 2017:
+![Refactored 2017 Speed](https://github.com/john10roberts/stock-analysis/blob/main/Resources/VBA_Challenge_2017.png)
 
-### Challenges and Difficulties Encountered
-There didn't appear to be any difficulties or challenges with this data set.  Everything was presented in a logical manner.
+The speed for the original file for 2018
+![Original 2018 Speed](https://github.com/john10roberts/stock-analysis/blob/main/Resources/Green_stocks_ProcessingTime_2018.png)
 
-## Results
+The speed for the refactored file for 2018
+![Refactored 2018 Speed](https://github.com/john10roberts/stock-analysis/blob/main/Resources/VBA_Challenge_2018.png)
 
-- What are two conclusions you can draw about the Outcomes based on Launch Date?
-Kickstarters launched in May have the best chance of success.  
-Kickstarters launched in December have the smallest chance of success
+## Summary
 
-- What can you conclude about the Outcomes based on Goals?
-Kickstarters of less than 5k are the most successful
-Kickstarters greater than 5k are the least successful
+- What are the advantages or disadvantages of refactoring code?
+"Refactoring is a controlled technique for improving the design of an existing code base." (Fowler, n.d.).  The major advantages of code refactoring are improving the efficiency of the existing code.  This has been demonstrated in our refactoring of the source data as the speeds for 2017 and 2018 have clearly increased.  The major disadvantage to refactoring is you are taking code that’s working as expected in its current format and changing it.  This could cause the code to stop working altogether or introduce other issues that might not be tested for correctly.  Additionally, the amount of time spent refactoring the code is like the amount of time it might have taken to just develop the solution from scratch.  
 
-- What are some limitations of this dataset?
-We don't know much information about the kickstarters other than a name and blurb, more information on what it was would be beneficial.  It would also be nice to be able to see the type of donor and maybe some information on the donors to be able to classify the type of person donating. 
+- How do these pros and cons apply to refactoring the original VBA?
+For this stock project we were clearly able to improve the efficiency of the code and make the entire project execute quicker.  If we were dealing with a much larger excel sheet this increase in efficiency could be a tremendous pick up.  However, the increase in efficiency of the existing spreadsheet is probably not worth the effort in refactoring the code.  
 
-- What are some other possible tables and/or graphs that we could create?
-Backers to success it would be nice to know if there is any correlation between the number of backers and a projects success. 
-Backers Descriptive Statistics 
+References
+Fowler, M. (n.d.). Refactoring. Retrieved from martinFowler.com: https://martinfowler.com/books/refactoring.html
